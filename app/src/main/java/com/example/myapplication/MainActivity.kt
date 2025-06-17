@@ -36,9 +36,7 @@ class MainActivity : ComponentActivity() {
                         composable("camera") {
                             CameraScreen(
                                 onBackClick = {
-                                    navController.navigate("home") {
-                                        popUpTo("home") { inclusive = false }
-                                    }
+                                    navController.popBackStack()
                                 }
                             )
                         }
